@@ -1,0 +1,67 @@
+html{
+    font-size: 20px;
+}
+
+//HEADER
+header{
+    height: 15vh;
+    background-color: antiquewhite;
+    padding: 20px;
+}
+.logo, nav{
+    display: inline-block;
+}
+.log{
+    width: 30vw;
+}
+nav{
+    float: right;
+    margin-right: 20px;
+    width: 70vw;
+}
+li{
+    display: inline-block;
+    border: 2px solid grey;
+    margin: 0 20px;
+}
+
+//SECTION
+section{
+    height: 75vh;
+    background-color: gainsboro;
+    font-size: 0;    //padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainImage, .author{
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+   height: 80%;
+}
+.mainImage{
+    width: 70vw;
+    background-color: darkgrey;
+}
+.author{
+    width: 30vw;
+    background-color: grey;
+    div{
+        height: 30%;
+    }
+}
+
+
+//FOOTER
+footer{
+    //height: 15vh;
+    background-color: cornsilk;
+    padding: 20px;
+    p, div{
+        display: inline-block;
+    }
+}
+.smallLogo{
+    float:right;
+}
