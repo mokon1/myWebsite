@@ -1,38 +1,55 @@
 html{
     font-size: 20px;
+    color: map-get($colors,pink);
+}
+hr{
+    width: 85%;
+    margin: 5px auto;
+    background-color: grey;
+    height: 4px;
 }
 
-//HEADER
+
+// ================ HEADER ================ //
 header{
     height: 15vh;
-    background-color: antiquewhite;
-    padding: 20px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 2%;
+    display: flex;
 }
 .logo, nav{
     display: inline-block;
 }
-.log{
-    width: 30vw;
+.logo{
+    width: 20%;
 }
 nav{
     float: right;
-    margin-right: 20px;
-    width: 70vw;
+    width: 80%;
+    display: flex;
+}
+ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 li{
-    display: inline-block;
-    border: 2px solid grey;
-    margin: 0 20px;
+    font-weight: bold;    
 }
 
-//SECTION
+// ================ SECTION ================ //
 section{
     height: 75vh;
-    background-color: gainsboro;
-    font-size: 0;    //padding: 20px;
+    font-size: 0;
+    margin: 0 auto;
+    padding: 0 10%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: map-get($colors, lightblue);
+    color: map-get($colors,green);
 }
 .mainImage, .author{
     display: inline-block;
@@ -41,23 +58,20 @@ section{
    height: 80%;
 }
 .mainImage{
-    width: 70vw;
-    background-color: darkgrey;
+    width: 70%;
 }
 .author{
-    width: 30vw;
-    background-color: grey;
+    width: 30%;
     div{
         height: 30%;
     }
 }
 
-
-//FOOTER
+// ================ FOOTER ================ //
 footer{
-    //height: 15vh;
-    background-color: cornsilk;
-    padding: 20px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 2%;
     p, div{
         display: inline-block;
     }
