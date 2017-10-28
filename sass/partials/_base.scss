@@ -1,6 +1,15 @@
 html{
-    font-size: 20px;
+    font-size: 15px;
     color: map-get($colors,pink);
+    @include smallDevices{
+        font-size: 18px;
+    }
+    @include mediumDevices{
+        font-size: 20px;
+    }
+     @include largeDevices{
+        font-size: 22px;
+    }
 }
 hr{
     width: 85%;
@@ -30,10 +39,13 @@ nav{
     display: flex;
 }
 ul{
-    display: flex;
+    display: none;
     width: 100%;
     justify-content: space-around;
     align-items: center;
+    @include smallDevices{
+        display: flex;
+    }
 }
 li{
     font-weight: bold;    
@@ -45,23 +57,32 @@ section{
     font-size: 0;
     margin: 0 auto;
     padding: 0 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   // display: flex;
+   // justify-content: center;
+    //align-items: center;
     background-color: map-get($colors, lightblue);
     color: map-get($colors,green);
 }
 .mainImage, .author{
-    display: inline-block;
-    font-size: 20px;
+    display: block;
+    width: 100%;
     padding: 10px;
-   height: 80%;
+    font-size: 0.8rem;
+     @include smallDevices{
+        display: inline-block;
+        height: 80%;
+    }
 }
 .mainImage{
-    width: 70%;
+    border: 2px solid pink;
+    @include smallDevices{
+        width: 70%;
+    }
 }
 .author{
-    width: 30%;
+    @include smallDevices{
+        width: 30%;
+    }
     div{
         height: 30%;
     }
@@ -71,7 +92,8 @@ section{
 footer{
     width: 85%;
     margin: 0 auto;
-    padding: 2%;
+    padding: 1%;
+    font-size: 0.6rem;
     p, div{
         display: inline-block;
     }
