@@ -22,10 +22,13 @@ hr{
 // ================ HEADER ================ //
 header{
     height: 15vh;
-    width: 85%;
+    width: 95%;
     margin: 0 auto;
     padding: 2%;
     display: flex;
+    @include smallDevices{
+        width: 85%;
+    }
 }
 .logo, nav{
     display: inline-block;
@@ -57,16 +60,19 @@ section{
     font-size: 0;
     margin: 0 auto;
     padding: 0 10%;
-   // display: flex;
-   // justify-content: center;
-    //align-items: center;
     background-color: map-get($colors, lightblue);
     color: map-get($colors,green);
+     @include smallDevices{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         
+    }
+    
 }
 .mainImage, .author{
     display: block;
     width: 100%;
-    padding: 10px;
     font-size: 0.8rem;
      @include smallDevices{
         display: inline-block;
@@ -74,12 +80,26 @@ section{
     }
 }
 .mainImage{
+    width: 260px;
+    height: 190px;
+    margin: 0 auto;
     border: 2px solid pink;
+    img{
+        width: 100%;
+        height: 100%;
+    }
     @include smallDevices{
         width: 70%;
+        height: 70%;
     }
+     @include extraLargeDevices{
+        width: 668px;
+        height: 377px;
+    }
+    
 }
 .author{
+    padding: 10px;
     @include smallDevices{
         width: 30%;
     }
@@ -90,12 +110,15 @@ section{
 
 // ================ FOOTER ================ //
 footer{
-    width: 85%;
+    width: 95%;
     margin: 0 auto;
     padding: 1%;
     font-size: 0.6rem;
     p, div{
         display: inline-block;
+    }
+    @include smallDevices{
+        width: 85%;
     }
 }
 .smallLogo{
